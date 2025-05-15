@@ -97,7 +97,6 @@ asmlings diff 1    # show real vs your .expect.asm
 ## License
 
 MIT.
-Use this to grow. Fork and train others.
 
 ## Contributing
 
