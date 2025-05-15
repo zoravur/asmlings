@@ -1,0 +1,22 @@
+#!/usr/bin/env bash
+
+cmd=$1
+n=$2
+
+if [[ $cmd == "--help" || $cmd == "-h" || -z $cmd ]]; then
+  make help
+  exit 0
+fi
+
+if [[ $cmd == "list" ]]; then
+  make list
+  exit
+fi
+
+if [[ -z $n ]]; then
+  echo "error: missing exercise number"
+  echo "usage: asmlings [check|diff] N"
+  exit 1
+fi
+
+make "$cmd" EXERCISE="$n"
